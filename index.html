@@ -1,25 +1,117 @@
-
 <!DOCTYPE html>
-<html>
-<head>
-  <title>My Image Search</title>
-  <style>
-    /* CSS styles go here */
-  </style>
-</head>
-<body>
-  <h1>Image Search</h1>
-  <p>Use the search box below to find images on the web:</p>
-  <input type="text" id="search-box">
-  <button onclick="search()">Search</button>
-  <div id="results"></div>
-  <script>
-    function search() {
-      // Get the search query from the search box
-      const query = document.getElementById('search-box').value;
-      // Use the query to search for images
-      // and display the results in the "results" div
+<html lang="en">
+    <head>
+        <title>Search</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <style>body {
+      font-family: Futura, Trebuchet MS, Arial, san-serif;
+      color: #202124;
     }
-  </script>
-</body>
+    
+    h1 {
+      font-size: 42pt;
+      margin: 5px;
+    }
+    
+    h3 {
+      margin: 30px 0px 10px 47px;
+    }
+    
+    .navbar {
+      text-align: right;
+    }
+    .navbar li {
+      display: inline-block;
+      padding: 10px;
+    }
+    .navbar a {
+      color: #202124;
+    }
+    .navbar a, .navbar a:active, .navbar a:hover, .navbar a:visited {
+      text-decoration: none;
+    }
+    .navbar a:active, .navbar a:hover {
+      text-decoration: underline;
+    }
+    
+    .searchbar {
+      border-color: #888888;
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 20px;
+      display: block;
+      margin: 10px;
+      padding: 10px;
+      width: 500px;
+    }
+    
+    @media only screen and (max-width: 550px) {
+      .searchbar {
+        width: 90%;
+      }
+    }
+    .searchbar-sm {
+      border-radius: 5px;
+      display: block;
+      margin: 7px;
+      padding: 7px;
+      width: 500px;
+    }
+    
+    @media only screen and (max-width: 768px) {
+      .searchbar-sm {
+        width: 190px;
+      }
+    }
+    .searchbutton {
+      background-color: #F8F9FA;
+      border-style: none;
+      margin: 11px 4px;
+      padding: 8px 16px;
+    }
+    
+    .text-input-table {
+      margin: 15px 45px;
+    }
+    .text-input-table tr {
+      font-size: 10pt;
+    }
+    .text-input-table tr td .searchbutton {
+      float: right;
+      background-color: #4D90FE;
+      color: #FFFFFF;
+    }
+    
+    .vertical-center {
+      margin-top: 150px;
+    }
+    
+    @media only screen and (max-height: 500px) {
+      .vertical-center {
+        margin-top: 15px;
+      }
+    }
+    .searchbar:hover, .searchbar:focus, .searchbar-sm:hover, .searchbar-sm:focus, .searchbutton:hover {
+      box-shadow: 0 0 1px 1px #888888;
+      outline: none;
+    }
+    
+    </style>
+    <body>
+        <ul class="navbar">
+    	    <li><a href="images.html">Images</a></li>
+    	    <li><a href="advanced.html">Advanced</a></li>
+        </ul>
+        <div>
+            <center class="vertical-center">
+                <h1>Google</h1>
+                <form action="https://google.com/search">
+                    <input type="text" name="q" class="searchbar">
+                    <input type="submit" value="Google Search" class="searchbutton">
+                    <input type="submit" name="btnI" value="I'm Feeling Lucky" class="searchbutton">
+                </form>
+            </center>
+        </div>
+    </body>
 </html>
